@@ -1,6 +1,6 @@
-from sqlalchemy.orm import declarative_base, Mapped, mapped_column
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
-class Base(declarative_base):
+class Base(DeclarativeBase):
     pass
 
 class urls(Base):
