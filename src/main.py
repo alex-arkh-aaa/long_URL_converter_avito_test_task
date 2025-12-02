@@ -10,7 +10,8 @@ from src.models import Base
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     async with engine.begin() as connection:
-        await connection.run_sync(Base.metadata.create_all)
+        res = await connection.run_sync(Base.metadata.create_all)
+        print(res)
     yield
 
 
